@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+int dau;
 void printSolution(int a[9][9]){
   int i,j,k;
   for(i=0;i<9;i++) cout<<"--";
@@ -31,8 +32,9 @@ int feasible (int s[][9],int x,int y,int k){
 void solve_sudoku(int s[][9],int x,int y){
   if(y==9){
     if(x==8){
+        dau=1;
         printSolution(s);
-        exit(0);
+        return ;
     }else{
       solve_sudoku(s,x+1,0);
     }
@@ -56,5 +58,6 @@ int main(){
   for(i=0;i<9;i++)
     for(j=0;j<9;j++) cin>>a[i][j];
   solve_sudoku(a,0,0);
+  if(dau==0) cout<<"No solution!";
   return 0;
 }
