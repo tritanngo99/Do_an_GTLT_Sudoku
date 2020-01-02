@@ -2,15 +2,10 @@
 using namespace std;
 int dau;
 void printSolution(int a[9][9]){
-  int i,j,k;
-  for(i=0;i<9;i++) cout<<"--";
-  cout<<'\n';
+    int i,j;
   for(i=0;i<9;i++){
-    cout<<"|";
-    for(j=0;j<9;j++) cout<<a[i][j]<<"|";
+    for(j=0;j<9;j++) cout<<a[i][j]<<" ";
     cout<<'\n';
-    for(k=0;k<9;k++) cout<<"--";
-  cout<<'\n';
   }
 }
 int feasible (int s[][9],int x,int y,int k){
